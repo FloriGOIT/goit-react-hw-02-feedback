@@ -49,12 +49,8 @@ function Statistics({good, bad, neutral, total, positivePercentage})
 
 
 export class FeedbackWidget extends React.Component
-{ constructor (props){
-    super(props)
-    this.state = {good: 0, neutral:0, bad:0};
-    this.handleOptions = this.handleOptions.bind(this)
-}
-  
+{ state = {good: 0, neutral:0, bad:0};
+
   handleOptions = (e) => {console.log("ana are mere")
                           let option = e.target.name;
                           console.log(option)
