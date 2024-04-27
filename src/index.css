@@ -13,4 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h2 {text-align: center;}
+h2 {text-align: center;
+   color:rgb(86, 206, 243);
+   text-shadow: 2px 2px 2px gold;}
+   
+.all {display: flex; flex-direction: row; gap: 100px}

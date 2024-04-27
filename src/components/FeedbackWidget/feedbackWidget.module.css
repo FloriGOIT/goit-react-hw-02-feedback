@@ -1,10 +1,12 @@
 .wrapperFeedback {border: 1px solid rgba(0, 0, 0, 0.705);
                   border-radius: 10px;
                   margin-left: 20px;
+                  margin-top: 70px;
                   background-color: antiquewhite;
                   display: inline-block;
-                  padding: 20px;
-                  box-shadow:  1px 3px 3px 0px rgb(186, 114, 228);}
+                  padding: 20px 40px;
+                  box-shadow:  1px 3px 3px 0px rgb(186, 114, 228);
+                  max-height: 300px;}
 
 .wrapperFeedback button {margin-right: 10px;
                          border: 1px solid rgba(41, 83, 209, 0.384);
