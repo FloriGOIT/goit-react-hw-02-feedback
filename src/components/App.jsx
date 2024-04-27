@@ -4,7 +4,7 @@ export const App = () =>
 {
   return (
     <>
-      <h2>Hello beautiful world of programming.</h2>
+      <h2>Hello beautiful world of programming</h2>
       <br/>
       <FeedbackWidget />
       <br/>
