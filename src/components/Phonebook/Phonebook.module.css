@@ -12,7 +12,8 @@
 .addWrapper input {margin-bottom: 20px;
                    margin-top: 3px;
                    border-radius: 10px;
-                   border: 2px solid rgb(231, 133, 4);}
+                   border: 2px solid rgb(231, 133, 4);
+                   outline: none;}
 
 .addWrapper button {width:100px;
                     border-radius: 10px;
@@ -29,7 +30,8 @@
                 flex-direction: column;}
 .searchWrapper input {margin-top: 3px;
                       border: 2px solid rgb(231, 133, 4);
-                      border-radius: 10px;}
+                      border-radius: 10px;
+                      outline: none;}
 
 .searchWrapper ul {padding-inline-start: 20px;
                    list-style-type:square;}
