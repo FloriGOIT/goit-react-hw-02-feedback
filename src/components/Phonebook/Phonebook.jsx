@@ -70,7 +70,7 @@ export class Phonebook extends React.Component
                                                       </li>)}
             {filter !== "" && filtered.map(contact => <li  className={css.listItem} key={contact.id}>
                                                           <span>{contact.name}: {contact.number} </span>
-                                                          <button type="button" className={css.delete} onClick={this.handleDelete}>
+                                                          <button type="button" className={css.delete} onClick={()=> this.handleDelete(contact.id)}>
                                                             Delete
                                                           </button>
                                                         </li>)}   
