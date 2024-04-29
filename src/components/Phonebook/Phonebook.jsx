@@ -27,22 +27,13 @@ export class Phonebook extends React.Component
 
     handleSearch = (e) => {let isFilter = e.target.value;
                            this.setState({filter: isFilter.toLowerCase()});
-                           console.log(this.state.filter)}
-
-    handleDelete = (e) => {let liToDelete = e.target.parentNode;
-                           console.log(liToDelete)}                  
-
-   
+                           console.log(isFilter)}
+    handleDelete = (param) => {this.setState(previousState => ({contacts: previousState.contacts.filter(contact=> contact.id !== param)}))}
+ 
  render()
   { const {filter, contacts} = this.state;
-    let filtered = contacts.filter(contact => contact.name.includes(`${filter}`));
-    let markup = contacts.map(contact => <li className={css.listItem} key={contact.id}>
-                                            <span>{contact.name}: {contact.number} </span>
-                                            <button type="button" className={css.delete} onClick={this.handleDelete}>
-                                              Delete
-                                            </button>
-                                         </li>)
-    
+    let filtered = contacts.filter(contact => contact.name.toLowerCase().includes(`${filter}`));
+
     return (
       <section className={css.wraperPhonebook}>
         <h3 className={css.titlePhonebook}>Phonebook</h3>
@@ -71,8 +62,13 @@ export class Phonebook extends React.Component
           <label>Find contacts name </label>
           <input type="text" id="searchId" name="search" onChange={this.handleSearch}/>
           <ul className={css.list}>
-            {markup}
-            {filter !== "" && filtered.map(contact => <li  className="listItem" id={contact.id}>
+            {filter === "" && contacts.map(contact => <li className={css.listItem} key={contact.id}>
+                                                          <span>{contact.name}: {contact.number} </span>
+                                                          <button type="button" className={css.delete} onClick={()=> this.handleDelete(contact.id)}>
+                                                            Delete
+                                                          </button>
+                                                      </li>)}
+            {filter !== "" && filtered.map(contact => <li  className={css.listItem} key={contact.id}>
                                                           <span>{contact.name}: {contact.number} </span>
                                                           <button type="button" className={css.delete} onClick={this.handleDelete}>
                                                             Delete
