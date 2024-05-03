@@ -17,4 +17,4 @@ h2 {text-align: center;
    color:rgb(86, 206, 243);
    text-shadow: 2px 2px 2px gold;}
    
-.all {display: flex; flex-direction: row; gap: 100px}
+.all {display: flex; flex-direction: row; gap: 30px}

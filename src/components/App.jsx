@@ -1,5 +1,6 @@
 import {FeedbackWidget} from "./FeedbackWidget/feedbackWidget.jsx"
 import {Phonebook} from "./Phonebook/Phonebook.jsx"
+import {PhonebookIsRefactored} from "../components/PhonebookIsRefactored/PhonebookIsRefactored.jsx"
 
 export const App = () => 
 {
@@ -13,6 +14,8 @@ export const App = () =>
         <FeedbackWidget />
         <br/>
         <Phonebook />
+        <br/>
+        <PhonebookIsRefactored />
       </div>
     </>
          );
