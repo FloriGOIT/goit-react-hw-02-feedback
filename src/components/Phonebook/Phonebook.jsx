@@ -2,6 +2,7 @@
 import css from "../Phonebook/Phonebook.module.css";
 import React from "react";
 import { nanoid } from "nanoid";
+import PropTypes from "prop-types"
 
 export class Phonebook extends React.Component
 {
@@ -31,7 +32,7 @@ export class Phonebook extends React.Component
 
     return (
       <section className={css.wraperPhonebook}>
-        <h3 className={css.titlePhonebook}>Phonebook</h3>
+        <h3 className={css.titlePhonebook}>Phonebook <i style={{fontSize: "10px"}}>(NOT refactored)</i></h3>
 
         <form className={css.addWrapper} onSubmit={this.handleInputs}>
           <label htmlFor="userName"> Name </label>
@@ -76,3 +77,11 @@ export class Phonebook extends React.Component
     );
   } 
 }
+
+
+Phonebook.propTypes = {name:  PropTypes.string,
+                       number: PropTypes.string,
+                       filter: PropTypes.string,
+                       contacts: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.string,
+                                                                    name:  PropTypes.string,
+                                                                    number: PropTypes.string,}))}

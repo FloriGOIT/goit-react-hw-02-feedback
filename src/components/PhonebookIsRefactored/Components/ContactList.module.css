@@ -1,0 +1,16 @@
+/*Contact List*/  
+
+.contactList {padding:0px;}
+
+.contactList li {width: inherit;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                gap: 60px;
+                justify-content: space-between;}
+span::first-letter {text-transform: uppercase;}               
+
+.contactList li button {border-radius: 5px;}       
+.contactList li button:hover{border-color:  rgb(35, 108, 243);
+                              border-radius: 5px;}
+.contactList li button:focus {border-color: rgb(155, 155, 184); outline: 2px solid white;}

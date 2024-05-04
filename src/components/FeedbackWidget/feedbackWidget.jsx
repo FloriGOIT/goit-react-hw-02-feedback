@@ -1,6 +1,7 @@
 
 import React from 'react';
 import css from '../FeedbackWidget/feedbackWidget.module.css'
+import PropTypes from "prop-types"
 
 function Section({children})
 {return(
@@ -9,6 +10,8 @@ function Section({children})
             {children}
         </div>
            )}
+Section.propTypes = {children: PropTypes.node}
+
 
 
 function FeedbackOptions({options, onLeaveFeedback})
@@ -17,6 +20,8 @@ function FeedbackOptions({options, onLeaveFeedback})
             <button type='button' name={Object.keys(options)[1]} onClick={onLeaveFeedback} > Neutral </button>
             <button type='button' name={Object.keys(options)[2]} onClick={onLeaveFeedback} > Bad </button>
         </>)}
+FeedbackOptions.propTypes = {options: PropTypes.object,
+                             onLeaveFeedback: PropTypes.func}
 
 
 function Statistics({goodi, badi, neutrali, totali, positivePercentagei})
@@ -42,6 +47,8 @@ function Statistics({goodi, badi, neutrali, totali, positivePercentagei})
             </ul>
         </div>
           )}
+Statistics.propTypes = {goodi: PropTypes.number, badi: PropTypes.number, neutrali: PropTypes.number, totali: PropTypes.number, positivePercentagei: PropTypes.number}
+
 
 
 export class FeedbackWidget extends React.Component
